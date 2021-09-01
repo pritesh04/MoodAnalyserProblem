@@ -48,4 +48,22 @@ public class MoodAnalyserRunner {
 		String result = analyser.analyseMood();
 		Assert.assertEquals("Happy", result);
 	}
+
+
+
+
+
+	@Test
+	public void givenNull_ShouldHandleException() throws MoodAnalyserException {
+		try {
+			MoodAnalyser analyser = new MoodAnalyser();
+			String result = analyser.analyseMood(null);
+			Assert.assertEquals("Exception Handled", result);
+		} catch (Exception e) {
+			e.getMessage();
+		}
+	}
+
+
+
 }
