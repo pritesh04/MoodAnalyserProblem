@@ -23,7 +23,8 @@ public class MoodAnalyser {
 
 	public String analyseMood(String mood) throws MoodAnalyserException {
 		try {
-
+			if(mood.length()<=0)
+				throw new MoodAnalyserException("Mood cannot be blank");
 			if (mood.contains("Happy"))
 				return "Happy";
 

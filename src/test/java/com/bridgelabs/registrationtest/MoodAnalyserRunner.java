@@ -80,5 +80,14 @@ public class MoodAnalyserRunner {
 			e.getMessage();
 		}
 	}
-
+	@Test
+	public void givenBlank_ShouldGive_NoBlankMood() throws MoodAnalyserException {
+		try {
+			MoodAnalyser analyser = new MoodAnalyser();
+			String result = analyser.analyseMood("");
+			Assert.assertEquals("Exception Handled", result);
+		} catch (Exception e) {
+			e.getMessage();
+		}
+	}
 }
