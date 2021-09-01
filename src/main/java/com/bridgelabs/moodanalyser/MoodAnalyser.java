@@ -33,7 +33,8 @@ public class MoodAnalyser {
 			else
 				return "Happy";
 		} catch (NullPointerException e) {
-			return "Exception Handled";
+			//return "Exception Handled";
+			return "Happy";
 		}
 
 	}
