@@ -21,5 +21,11 @@ public class MoodAnalyserRunner {
 		String result = analyser.analyseMood("Sad");
 		Assert.assertEquals("Sad", result);
 	}
+	@Test
+	public void given_IaminSadMood_ShouldReturnSAD() throws MoodAnalyserException {
+		MoodAnalyser analyser = new MoodAnalyser();
+		String result = analyser.analyseMood("I am in Sad Mood");
+		Assert.assertEquals("Sad", result);
+	}
 
 }
