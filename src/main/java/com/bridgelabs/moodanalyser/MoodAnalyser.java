@@ -5,11 +5,11 @@ public class MoodAnalyser {
 	public String analyseMood(String mood) {
 		if (mood.contains("Happy"))
 			return "Happy";
-		else if (mood.toLowerCase().contains("sad"))
+		if (mood.toLowerCase().contains("sad"))
 			return "Sad";
-
-		else
-			return "Sad";
+		else 
+			return "Happy";
+		
 
 	}
 }
