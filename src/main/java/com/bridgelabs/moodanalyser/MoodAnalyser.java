@@ -2,8 +2,12 @@ package com.bridgelabs.moodanalyser;
 
 public class MoodAnalyser {
 
-	public void test()
-	{
-		
+	public String analyseMood(String mood) {
+		if (mood.contains("Happy"))
+			return "Happy";
+
+		else
+			return "Sad";
+
 	}
 }
