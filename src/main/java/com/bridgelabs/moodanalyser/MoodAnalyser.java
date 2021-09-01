@@ -33,8 +33,8 @@ public class MoodAnalyser {
 			else
 				return "Happy";
 		} catch (NullPointerException e) {
-			//return "Exception Handled";
-			return "Happy";
+			throw new MoodAnalyserException("Message cant be Null please enter Something");
+			
 		}
 
 	}

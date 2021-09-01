@@ -51,14 +51,34 @@ public class MoodAnalyserRunner {
 		Assert.assertEquals("Happy", result);
 	}
 
-
 	@Test
-	public void givenNullMood_ShouldReturnHappy() throws MoodAnalyserException {
-		
+	public void givenNull_ShouldHandleException() throws MoodAnalyserException {
+		try {
 			MoodAnalyser analyser = new MoodAnalyser();
 			String result = analyser.analyseMood(null);
-			Assert.assertEquals("Happy", result);
-		
+			Assert.assertEquals("Exception Handled", result);
+		} catch (Exception e) {
+			e.getMessage();
+		}
+	}
+
+//	@Test
+//	public void givenNullMood_ShouldReturnHappy() throws MoodAnalyserException {
+//		
+//			MoodAnalyser analyser = new MoodAnalyser();
+//			String result = analyser.analyseMood(null);
+//			Assert.assertEquals("Happy", result);
+//		
+//	}
+	@Test
+	public void givenNull_ShouldGive_NoEmptyMood() throws MoodAnalyserException {
+		try {
+			MoodAnalyser analyser = new MoodAnalyser();
+			String result = analyser.analyseMood(null);
+			Assert.assertEquals("Exception Handled", result);
+		} catch (Exception e) {
+			e.getMessage();
+		}
 	}
 
 }
